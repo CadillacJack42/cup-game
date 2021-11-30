@@ -108,6 +108,10 @@ footer {
     margin: 0 83px;
 }
 
+#states {
+    text-align: center;
+}
+
   
   @keyframes pulse {
     20% {

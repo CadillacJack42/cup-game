@@ -22,16 +22,20 @@
     </header>
     <main>
         <div id='cups'>
-            <img src="./assets/cup.png" alt="Dani's cup drawing" id="cup1" class="all-cups">
-            <img src="./assets/cup.png" alt="Dani's cup drawing" id="cup2" class="all-cups">
-            <img src="./assets/cup.png" alt="Dani's cup drawing" id="cup3" class="all-cups">
+            <div class="cup">
+                <img src="./assets/cup.png" alt="Dani's cup drawing" id="cup1" class="all-cups">
+                <button id="btn1" class="all-btns">Select</button>
+            </div>
+            <div class="cup">
+                <img src="./assets/cup.png" alt="Dani's cup drawing" id="cup2" class="all-cups">
+                <button id="btn2" class="all-btns">Select</button>
+            </div>
+            <div class="cup">
+                <img src="./assets/cup.png" alt="Dani's cup drawing" id="cup3" class="all-cups">
+                <button id="btn3" class="all-btns">Select</button>
+            </div>
         </div>
-        <div id="btns">
-            <button id="btn1" class="all-btns">Select</button>
-            <button id="btn2" class="all-btns">Select</button>
-            <button id="btn3" class="all-btns">Select</button>
-        </div>
-        <div>
+        <div id="states">
             <p>Correct Guesses: <span id="correct-guess">0</span></p>
             <p>Incorrect Guesses: <span id="incorrect-guess">0</span></p>
             <p>Total Guesses: <span id="total-guess">0</span></p>
