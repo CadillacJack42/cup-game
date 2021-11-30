@@ -17,16 +17,48 @@ const totals = document.getElementById('total-guess');
 // initialize global state
 let win = 0;
 let total = 0;
+const cups = [cup1, cup2, cup3];
+const buttons = [btn1, btn2, btn3];
 // set event listeners 
 btn1.addEventListener('click', () => {
-  console.log('btn1');
+    handleClick(cups[0], cups);
 });
 btn2.addEventListener('click', () => {
-  console.log('btn2');
+    handleClick(cups[1], cups);
 });
 btn3.addEventListener('click', () => {
-  console.log('btn3');
+    handleClick(cups[2], cups);
 });
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+  
+
+const handleClick = (btn, cupArr) => {
+    total++;
+    let randomEl = random(cupArr);
+    if (btn === randomEl) {
+        win++;
+    }
+    randomEl.src = './assets/correct-cup.png';
+    displayState();
+    setTimeout(() => {
+        resetImg();
+    }, 1000);
+    
+};
+
+const random = (arr) => {
+    let num = Math.floor(Math.random() * arr.length);
+    let correctCup = arr[num];
+    return correctCup;
+};
+
+const resetImg = () => {
+    cup1.src = './assets/cup.png';
+    cup2.src = './assets/cup.png';
+    cup3.src = './assets/cup.png';
+};
+
+const displayState = () => {
+    wins.textContent = win;
+    losses.textContent = total - win;
+    totals.textContent = total;
+};
