@@ -18,7 +18,7 @@ const totals = document.getElementById('total-guess');
 let win = 0;
 let total = 0;
 const cups = [cup1, cup2, cup3];
-const buttons = [btn1, btn2, btn3];
+
 // set event listeners 
 btn1.addEventListener('click', () => {
     handleClick(cups[0], cups);
@@ -29,7 +29,6 @@ btn2.addEventListener('click', () => {
 btn3.addEventListener('click', () => {
     handleClick(cups[2], cups);
 });
-  
 
 const handleClick = (btn, cupArr) => {
     total++;
